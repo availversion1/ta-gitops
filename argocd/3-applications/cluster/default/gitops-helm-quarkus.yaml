@@ -1,4 +1,4 @@
-apiVersion: argoproj.io/v1alpha1
+apiVersion: argoproj.io/v1
 kind: Application
 metadata:
   name: quarkus-app
@@ -11,15 +11,10 @@ spec:
   source:
     helm:
       parameters:
-       - name: build.enabled
-          value: "false"
-        - name: deploy.route.tls.enabled
-          value: "true"
-       - name: image.name
-          value: quay.io/ablock/gitops-helm-quarkus
-    chart: quarkus
-    repoURL: https://redhat-developer.github.com/redhat-helm-charts
-    targetRevision: 0.0.3
+       - name: replicaCount
+          value: 2
+    chart: helm-guestbook
+    repoURL: https://github.com/argoproj/argocd-example-apps
   syncPolicy:
     automated:
       prune: true
