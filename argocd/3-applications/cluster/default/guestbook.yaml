@@ -15,7 +15,7 @@ spec:
           value: "2"
     chart: helm-guestbook
     repoURL: https://github.com/argoproj/argocd-example-apps/helm-guestbook
-    targetRevision: 53e28ff20cc530b9ada2173fbbd64d48338583ba
+    targetRevision: master
   syncPolicy:
     automated:
       prune: true
