@@ -4,6 +4,7 @@ metadata:
   name: quarkus-app
   namespace: openshift-gitops
 spec:
+  project: thomas
   destination:
     namespace: demo
     server: https://kubernetes.default.svc
