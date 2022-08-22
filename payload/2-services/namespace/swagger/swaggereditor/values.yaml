@@ -1,0 +1,6 @@
+"swaggereditor":
+  "clusterType": "openshift"
+  "ingressSubdomain": ""
+  "sso.enabled": true
+  "tlsSecretName": ""
+
